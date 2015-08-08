@@ -6,12 +6,14 @@ function Animal(name, age, kind){
 }
 
 Animal.prototype.growUp = function () {
-  return this.age++;
+  return this.age += 1;
 };
 
 Animal.prototype.feed = function () {
   if (this.awake === true) {
     return "NOM NOM NOM!";
+  } else {
+    return "Animal is sleeping";
   }
 };
 
@@ -19,7 +21,7 @@ Animal.prototype.wakeUp = function () {
   return this.awake = true;
 };
 
-Aniaml.prototype.sleep = function () {
+Animal.prototype.sleep = function () {
   return this.awake = false;
 };
 Animal.prototype.oink = function(){
