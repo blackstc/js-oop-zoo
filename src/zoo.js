@@ -22,12 +22,16 @@ Zoo.prototype.close = function () {
 Zoo.prototype.isOpen = function () {
   if (this.status === "open") {
     return "Open!";
+  } else {
+    return "Closed!";
   }
 };
 
 Zoo.prototype.addAnimal = function (animal) {
   if (this.status === "open") {
     this.animals.push(animal);
+  } else {
+    return "Zoo is closed"
   }
 };
 
