@@ -53,17 +53,25 @@ describe('Zoo', function(){
     });
 
     it('should only add instances of animals', function(){
-      // add spec
+      zoo.status = "open";
+      zoo.addAnimal("dog");
+      expect(zoo.animals.length).toEqual(0);
     });
 
     it('should not add duplicates', function(){
-      // add spec
+      zoo.status = "open";
+      zoo.addAnimal(pig);
+      zoo.addAnimal(pig);
+      expect(zoo.animals.length).toEqual(1);
     });
   });
 
   describe('#removeAnimal', function(){
     it('should remove an animal from the animals array if the zoo is open', function(){
-      // add spec
+      zoo.status = "open";
+      zoo.addAnimal(pig);
+      zoo.removeAnimal(pig);
+      expect(zoo.animals.length).toEqual(0);
     });
   });
 });
