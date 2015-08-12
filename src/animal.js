@@ -6,7 +6,7 @@ function Animal(name, age, kind){
 }
 
 Animal.prototype.growUp = function () {
-  return this.age += 1;
+  this.age++;
 };
 
 Animal.prototype.feed = function () {
@@ -18,11 +18,11 @@ Animal.prototype.feed = function () {
 };
 
 Animal.prototype.wakeUp = function () {
-  return this.awake = true;
+  this.awake = true;
 };
 
 Animal.prototype.sleep = function () {
-  return this.awake = false;
+  this.awake = false;
 };
 Animal.prototype.oink = function(){
   if (this.kind === 'Pig'){

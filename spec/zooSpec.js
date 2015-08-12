@@ -14,13 +14,15 @@ describe('Zoo', function(){
 
   describe('#changeLocation', function(){
     it('should change locations', function(){
-      expect(zoo.changeLocation("Denver")).toEqual("Denver");
+      zoo.changeLocation("Denver")
+      expect(zoo.location).toEqual("Denver");
     });
   });
 
   describe('#open', function(){
     it('should change status to open', function(){
-      expect(zoo.open()).toEqual("open");
+      zoo.open();
+      expect(zoo.status).toEqual("open");
     });
   });
 
