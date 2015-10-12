@@ -36,7 +36,7 @@ Zoo.prototype.addAnimal = function (animal) {
 };
 
 Zoo.prototype.removeAnimal = function (animal) {
-  if (this.status === "open" && this.anmials.indexOf(animal) > -) {
+  if (this.status === "open" && this.anmials.indexOf(animal) > -1) {
     this.animals.splice(this.animals.indexOf(animal), 1);
   }
 };
